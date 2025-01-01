@@ -103,3 +103,6 @@ Blog filters :
 this will retrieve the whole blog details which is created by the who have ID 1 
 [GET]  url/api/blogs/?created_at=2024-31-12
 this will retrieve the whole blogs details created at 2024-31-12
+
+
+Documented API using postman extension : https://web.postman.co/workspace/My-Workspace~2b5b672c-d344-477c-843c-e8d5dd293288/collection/40455694-345ac7a4-c209-49af-93a0-11388d471bea?action=share&source=copy-link&creator=40455694
