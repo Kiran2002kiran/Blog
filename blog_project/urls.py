@@ -16,28 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path , include
-from rest_framework.routers import DefaultRouter
-from blog_app.views import CountryViewSet, UserViewSet, BlogViewSet
-from blog_app.views import LogoutView
-from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
-from rest_framework.permissions import AllowAny
 
-
-router = DefaultRouter()
-router.register("countries" , CountryViewSet)
-router.register("users" , UserViewSet)
-router.register("blogs" , BlogViewSet)
-
-
-urlpatterns = [
+urlpatterns=[
     path('admin/', admin.site.urls),
-    path('blog_app/',include('blog_app.urls')),
-    path('api/', include(router.urls)),
-
-    path('api/login/',TokenObtainPairView.as_view(),name='login'),
-    path("api/logout/", LogoutView.as_view(), name="logout"),
-    path("api/refresh/", TokenRefreshView.as_view(), name="token_refresh")
-
-    
+    path('api/',include('blog_app.urls')),
 ]
-
